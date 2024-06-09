@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>manageAppVersionAndBuildNumber</key>
+	<true/>
+	<key>method</key>
+	<string>development</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>signingCertificate</key>
+	<string>Apple Development: Abhinand Rk (986T7738N4)</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.infinyte.club.dev</key>
+		<string>8c37cdc8-8900-4516-848a-ded225317163</string>
+		<key>com.infinyte.club.dev.Notification-Service-Extension</key>
+		<string>7c474aae-661e-4ec6-bb6e-ea42f1cdf6e1</string>
+		<key>com.infinyte.club.dev.Notification-Content-Extension</key>
+		<string>c4af24bf-76d7-47e8-92dc-89e9099953a4</string>
+	</dict>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>B9NT42PL57</string>
+	<key>uploadSymbols</key>
+	<true/>
+</dict>
+</plist>

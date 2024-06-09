@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>manageAppVersionAndBuildNumber</key>
+	<true/>
+	<key>method</key>
+	<string>app-store</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+    <key>signingCertificate</key>
+	<string>Apple Distribution: SCANPAY PTE. LTD. (79R463DQVJ)</string>
+    <key>provisioningProfiles</key>
+	<dict>
+		<key>tech.scanpay.merchant</key>
+		<string>f6649f88-a21d-4023-b1d9-9086e9e11cc2</string>
+		<key>tech.scanpay.merchant.NotificationExtension</key>
+		<string>2f5d06bb-fe91-4974-8d18-616ff8f24f0e</string>
+	</dict>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>79R463DQVJ</string>
+	<key>uploadSymbols</key>
+	<true/>
+</dict>
+</plist>

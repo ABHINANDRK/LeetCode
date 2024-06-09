@@ -39,75 +39,33 @@
 # lRUCache.get(3);    // return 3
 # lRUCache.get(4);    // return 4
 
-class Node:
-    def __init__(self, k, v):
-        self.key = k
-        self.val = v
-        self.prev = None
-        self.next = None
 
-class LRUCache:
+class LRUCache(object):
+
+    store = {}
+
     def __init__(self, capacity):
         self.capacity = capacity
-        self.dic = dict()
-        self.head = Node(0, 0)
-        self.tail = Node(0, 0)
-        self.head.next = self.tail
-        self.tail.prev = self.head
+        
 
     def get(self, key):
-        if key in self.dic:
-            n = self.dic[key]
-            self._remove(n)
-            self._add(n)
-            return n.val
-        return -1
+        if key in store:
+            return store[key]
+        else:
+            return -1
 
-    def set(self, key, value):
-        if key in self.dic:
-            self._remove(self.dic[key])
-        n = Node(key, value)
-        self._add(n)
-        self.dic[key] = n
-        if len(self.dic) > self.capacity:
-            n = self.head.next
-            self._remove(n)
-            del self.dic[n.key]
+        
 
-    def _remove(self, node):
-        p = node.prev
-        n = node.next
-        p.next = n
-        n.prev = p
-
-    def _add(self, node):
-        p = self.tail.prev
-        p.next = node
-        self.tail.prev = node
-        node.prev = p
-        node.next = self.tail
-
-    
-if __name__ == '__main__':
-    cache = LRUCache(2)
-    cache.get(1)
-    cache.put(2,6)
-    cache.get(1)
-    cache.put(1,5)
-    # print(cache.store)
-    # cache.printAll()
-    cache.put(1,2)
-    cache.get(1)
-    cache.get(2)
-    print(cache.store)
-  
-
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: None
+        """
+        
 
 
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)
 # param_1 = obj.get(key)
 # obj.put(key,value)
-
-# ["LRUCache","get","put","get","put","put","get","get"]
-# [[2],[2],[2,6],[1],[1,5],[1,2],[1],[2]]
